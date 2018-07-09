@@ -35,7 +35,7 @@ for i in range(0, 99999):
         print("Removing temporary file...")
         rmfile("newhashes.txt")
         print("Operation for file " + str(i).zfill(5) + " complete.")
-    except urllib.request.URLError:
+    except urllib.request.URLError, e:
         if e.code == 404:
             print("File " + str(i).zfill(5) + " not found. Breaking...")
             break
