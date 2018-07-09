@@ -1,0 +1,34 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.6.5
+
+before_install:
+  - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
+  - git config --global user.email "richiebendall@gmail.com"
+  - git config --global user.name "Richienb"
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - autopep8 -v -i -r -a -a -a generate.py
+  - autoflake generate.py
+  - git add generate.py
+  - git diff-index --quiet HEAD || git commit -m "Normalised generation file [skip ci]"
+
+script:
+  - python generate.py
+  - git add -f virushashes.txt
+  - git diff-index --quiet HEAD || git commit -m "Update Virus Hashes [skip ci]"
+
+after_success:
+  - pasteurize generate.py
+  - git add generate.py
+  - git diff-index --quiet HEAD || git commit -m "Added backwards compatibility [skip ci]"
+  - git push origin HEAD:master
+
+notifications:
+  email: false
