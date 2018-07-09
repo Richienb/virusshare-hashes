@@ -5,7 +5,7 @@ from socket import create_connection
 # Check for internet connection
 print("Checking for an internet connection...")
 try:
-    create_connection("www.google.com", 80)
+    create_connection(("www.google.com", 80))
     print("Internet connection established!")
 except OSError:
     print("Please connect to the internet!")
@@ -30,14 +30,14 @@ for i in range(0, 99999):
         with open("virushashes.txt", "r+") as f:
             with open("newhashes.txt", "r") as ff:
                 for ii in enumerate(ff.readlines()):
-                    while True:
-                        f.write(str(ii[1]))
+                    f.write(str(ii[1]))
         print("Appending complete!")
         print("Removing temporary file...")
         rmfile("newhashes.txt")
         print("Operation for file " + str(i).zfill(5) + " complete.")
     except urllib.request.URLError:
         if e.code == 404:
+            print("File " + str(i).zfill(5) + " not found. Breaking...")
             break
         else:
             raise RunTimeError(
