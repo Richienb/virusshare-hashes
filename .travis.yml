@@ -11,7 +11,7 @@ cache:
 before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
   - git config --global user.email "richiebendall@gmail.com"
-  - git config --global user.name "Richienb"
+  - git config --global user.name "ROS Bot"
 
 install:
   - pip install -r requirements.txt
