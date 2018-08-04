@@ -2,8 +2,11 @@ sudo: false
 
 language: python
 
-python:
-  - 3.6.5
+python: 3.6.6
+
+cache:
+  directories:
+    - $HOME/.cache
 
 before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
