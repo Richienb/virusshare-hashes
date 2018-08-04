@@ -1,10 +1,10 @@
 # Virus Share Hashes
 
-Every single [Virus Share](https://virusshare.com/hashes.4n6) hash in a single file.
+Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a single file, ready for distribution and CI integrations.
 
 ## How to use
 
-### Download the pre-built hashes
+### Download the pre-created list of MD5 hashes
 
 #### Using CURL
 
@@ -24,7 +24,7 @@ URL not working? Alternate URL: `https://raw.githubusercontent.com/Richienb/viru
 
 Other methods of download **are** supported
 
-### Build the hashes yourself
+### Compile the list of hashes yourself
 
 The hashes are updated daily but you can manually build the hashes yourself as well.
 
