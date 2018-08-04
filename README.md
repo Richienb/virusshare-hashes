@@ -1,4 +1,4 @@
-# Virus Share Hashes
+# Virus Share Hashes [![Build Status](https://travis-ci.com/Richienb/virusshare-hashes.svg?branch=master)](https://travis-ci.com/Richienb/virusshare-hashes)
 
 Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a single file, ready for distribution and CI integrations.
 
