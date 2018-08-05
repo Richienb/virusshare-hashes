@@ -47,11 +47,16 @@ for i in range(0, 99999):
         print("Download success!")
         print("Appending...")
 
-        # Append file
+        # Append file - Open hashes file
         with open("virushashes.txt", "r+") as f:
+            # Open newly downloaded hashes file
             with open("newhashes.txt", "r") as ff:
+                # For each line in the newly downloaded hashes file
                 for ii in enumerate(ff.readlines()):
-                    f.write(str(ii[1]))
+                    # If the current string is not a comment (doesn't start with #)
+                    if not str(ii[1]).startswith("#"):
+                        # Write that string to the hashes file
+                        f.write(str(ii[1]))
 
         print("Appending complete!")
         print("Removing temporary file...")
