@@ -53,7 +53,8 @@ for i in range(0, 99999):
             with open("newhashes.txt", "r") as ff:
                 # For each line in the newly downloaded hashes file
                 for ii in enumerate(ff.readlines()):
-                    # If the current string is not a comment (doesn't start with #)
+                    # If the current string is not a comment (doesn't start
+                    # with #)
                     if not str(ii[1]).startswith("#"):
                         # Write that string to the hashes file
                         f.write(str(ii[1]))
