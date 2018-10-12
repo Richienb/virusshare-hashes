@@ -44,4 +44,4 @@ The hashes are updated daily but you can manually build the hashes yourself as w
 
 3. Wait a while
 
-4. You will know that the operation has succeded when you recieve this message in the commandline: `Hashes file creation complete.`
+4. You will know that the operation has succeeded when you receive this message in the command line: `Hashes file creation complete.`
