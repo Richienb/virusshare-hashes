@@ -30,9 +30,9 @@ The hashes are updated daily but you can manually build the hashes yourself as w
 
 #### What you need
 
-- Python 3.x and later (backwards compatibility to Python 2.x is also supported).
-- An internet connection (to download the generator).
-- Avalible disk space. 10MB should be more than enough; at the time of writing it is only 4.3MB big.
+- Python 2.x or newer.
+- An internet connection.
+- Avalible disk space. 10MB (not including Python) should be more than enough; at the time of writing the generated file is only 4.13MB big.
 
 #### How to do it
 
@@ -44,4 +44,4 @@ The hashes are updated daily but you can manually build the hashes yourself as w
 
 3. Wait a while
 
-4. You will know that the operation has succeded if you recieve this message in the commandline: `Hashes file creation complete.`
+4. You will know that the operation has succeded when you recieve this message in the commandline: `Hashes file creation complete.`
