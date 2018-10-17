@@ -10,24 +10,19 @@ Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a singl
 
 Download from this URL:
 ```
-https://rawgit.com/Richienb/virusshare-hashes/master/virushashes.txt
-```
-
-Alternatively, as a fallback you can use:
-```
 https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 #### Using CURL
 
 ```sh
-$ curl -L -o virushashes.txt https://rawgit.com/Richienb/virusshare-hashes/master/virushashes.txt
+$ curl -L -o virushashes.txt https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 #### Using WGET
 
 ```sh
-$ wget https://rawgit.com/Richienb/virusshare-hashes/master/virushashes.txt
+$ wget https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 Other methods of download **are** supported
@@ -44,9 +39,7 @@ The hashes are updated daily but you can manually build the hashes yourself as w
 
 #### How to do it
 
-1. Download the generation file from `https://rawgit.com/Richienb/virusshare-hashes/master/generate.py`. 
-
-    URL not working? Alternate URL: `https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/generate.py`
+1. Download the generation file from `https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/generate.py`. 
   
 2. Generate the hashes by running `python generate.py`
 
