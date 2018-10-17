@@ -6,6 +6,18 @@ Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a singl
 
 ### Download the pre-created list of MD5 hashes
 
+#### Download URL
+
+Download from this URL:
+```
+https://rawgit.com/Richienb/virusshare-hashes/master/virushashes.txt
+```
+
+Alternatively, as a fallback you can use:
+```
+https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+```
+
 #### Using CURL
 
 ```sh
@@ -17,10 +29,6 @@ $ curl -L -o virushashes.txt https://rawgit.com/Richienb/virusshare-hashes/maste
 ```sh
 $ wget https://rawgit.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
-
-#### Tips
-
-URL not working? Alternate URL: `https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt`
 
 Other methods of download **are** supported
 
