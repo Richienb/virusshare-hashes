@@ -35,15 +35,14 @@ if isfile("newhashes.txt"):
 
 # Find all possible files
 for i in range(0, 99999):
-    print(
-        "Trying https://virusshare.com/hashes/VirusShare_{0}.md5...".format(str(i).zfill(5)))
+    print("Trying https://virusshare.com/hashes/VirusShare_{0}.md5...".format(
+        str(i).zfill(5)))
     try:
 
         # Try to download file
         urlretrieve(
             "https://virusshare.com/hashes/VirusShare_{0}.md5".format(
-                str(i).zfill(5)),
-            "newhashes.txt")
+                str(i).zfill(5)), "newhashes.txt")
         print("Download success!")
         print("Appending...")
 
@@ -77,8 +76,7 @@ for i in range(0, 99999):
 
         # Otherwise raise an error
         else:
-            print(
-                "An error has occured: Recieved URL response code " + e.code)
+            print("An error has occured: Recieved URL response code " + e.code)
 
             # Exit the execution with a value of 1
             exitexc(1)
@@ -87,8 +85,7 @@ for i in range(0, 99999):
     except URLError as e:
 
         # Raise an error
-        print(
-            "Unable to reach the server: Reason provided is " + str(e.reason))
+        print("Unable to reach the server: Reason provided is " + str(e.reason))
 
         # Exit the execution with a value of 1
         exitexc(1)
