@@ -1,5 +1,4 @@
 # Code Fixing
-autopep8
-autoflake
+yapf~=0.25.0
 # Backwards compatibility
-future
+future~=0.17.1
