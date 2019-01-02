@@ -4,9 +4,7 @@ dist: xenial
 
 python: 3.7
 
-cache:
-  directories:
-    - $HOME/.cache
+cache: pip
 
 before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
