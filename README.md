@@ -16,20 +16,20 @@ https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.
 #### Using CURL
 
 ```sh
-$ curl -L -o virushashes.txt https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+curl -L -o virushashes.txt https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 #### Using WGET
 
 ```sh
-$ wget https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+wget https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 Other methods of download **are** supported
 
 ### Compile the list of hashes yourself
 
-The hashes are updated daily but you can manually build the hashes yourself as well.
+The hashes are updated weekly but you can manually build the hashes yourself as well.
 
 #### What you need
 
