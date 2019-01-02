@@ -12,13 +12,11 @@ from os.path import isfile
 # Check for internet connection
 print("Checking for an internet connection...")
 try:
-    create_connection(("www.google.com", 80))
+    create_connection(("www.google.com", 443))
     print("Internet connection established!")
 except OSError:
     print("Please connect to the internet!")
-    print("Press any key to close...")
-    input("")
-    exit()
+    exitexec(1)
 
 # Clear File
 if isfile("virushashes.txt"):
