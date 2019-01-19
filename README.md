@@ -4,6 +4,10 @@ Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a singl
 
 ## How to use
 
+### Use the online interface
+
+[ROS Quick Scan](https://richienb.github.io/ros-quick-scan) is an online tool that leverages the [ROS Quick Scan API](#use-the-online-api) to check files.
+
 ### Download the pre-created list of MD5 hashes
 
 #### Download URL
