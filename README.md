@@ -44,13 +44,13 @@ You can use the ROS Quick Scan API to check if a MD5 hash matches one in the lis
 **Example output**:
 
 ```json
-{safe: true, success: true}
+{"safe": true, "success": true}
 ```
 
 **Example failed output**:
 
 ```json
-{success: false, type: 400, message: "The q parameter is too short. An MD5 hash is exactly 32 characters long."}
+{"success": false, "type": 400, "message": "The q parameter is too short. An MD5 hash is exactly 32 characters long."}
 ```
 
 ### Compile the list of hashes yourself
