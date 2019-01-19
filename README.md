@@ -57,7 +57,45 @@ You can use the ROS Quick Scan API to check if a MD5 hash matches one in the lis
 {"success": false, "type": 400, "message": "The q parameter is too short. An MD5 hash is exactly 32 characters long."}
 ```
 
-### Compile the list of hashes yourself
+## Mirror the hashes file
+
+### What you need
+
+- A new GitHub repository with Travis CI
+
+### How to do it
+
+1. Set the following content in your `.travis.yml` file, replacing the marked areas with your own information.
+
+```yml
+language:                 generic
+
+before_install:
+  - git remote set-url origin https://Richienb:${github_token}@github.com/<REPO_OWNER_USERNAME>/<REPO_NAME>.git
+  - git config --global user.name "<NAME OF COMMITER (SOMETHING LIKE: "Commit Bot")>"
+  - git config --global user.email "<COMMITTER EMAIL ADDRESS (THIS COULD BE YOURS)>"
+
+before_script:
+  - rm -f virushashes.txt
+
+script:
+  - curl -L -o virushashes.txt https://raw.githack.com/Richienb/virusshare-hashes/master/virushashes.txt
+  
+after_script:
+  - git add virushashes.txt
+  - git commit -m "CI | Updated the hashes library for legacy support [skip ci]"
+  - git push
+  
+notifications: email: false
+```
+
+2. Create a GitHub personal access token and choose the `public_repo` scope for public repositories or `repo` for private repositories.
+
+3. Set the `github_token` environmental variable in Travis CI to that token.
+
+4. Schedule a cron job with a daily interval, with the option of only running it if one hasn't in the past 24 hours selected.
+
+## Compile the list of hashes yourself
 
 The hashes are updated weekly but you can manually build the hashes yourself as well.
 
@@ -65,7 +103,7 @@ The hashes are updated weekly but you can manually build the hashes yourself as 
 
 - Python 2.x or newer.
 - An internet connection.
-- Avalible disk space. 10MB (not including Python) should be more than enough; at the time of writing the generated file is only 4.13MB big.
+- Available disk space. 10MB (not including Python) should be more than enough; at the time of writing the generated file is only 4.13MB big.
 
 #### How to do it
 
