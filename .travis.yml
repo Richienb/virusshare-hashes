@@ -14,17 +14,11 @@ before_install:
 install:
   - pip install -r requirements.txt
 
-before_script:
-  - yapf --style google --in-place generate.py
-  - git add generate.py && git diff-index --quiet HEAD || git commit -m "Normalised generation file [skip ci]"
-
 script:
   - python generate.py
   - git add -f virushashes.txt && git diff-index --quiet HEAD || git commit -m "Update Virus Hashes [skip ci]"
 
 after_success:
-  - pasteurize generate.py
-  - git add generate.py && git diff-index --quiet HEAD || git commit -m "Added backwards compatibility [skip ci]"
   - git push origin HEAD:master
 
 notifications:
