@@ -27,6 +27,32 @@ wget https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virusha
 
 Other methods of download **are** supported
 
+### Use the online API
+
+You can use the ROS Quick Scan API to check if a MD5 hash matches one in the list
+
+**Endpoint**: `https://script.google.com/macros/s/AKfycbyS0v38UlKkLe18CwwxLjxKpQ1CQIUiBZGXvA519W2Pf_nqKmM/exec`
+
+**Type**: `GET`
+
+**Parameters**:
+
+`q`: The MD5 hash to check.
+
+`callback`: An optional JSONP callback.
+
+**Example output**:
+
+```json
+{safe: true, success: true}
+```
+
+**Example failed output**:
+
+```json
+{success: false, type: 400, message: "The q parameter is too short. An MD5 hash is exactly 32 characters long."}
+```
+
 ### Compile the list of hashes yourself
 
 The hashes are updated weekly but you can manually build the hashes yourself as well.
