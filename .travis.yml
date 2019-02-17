@@ -16,7 +16,7 @@ install:
 
 script:
   - python generate.py
-  - git add -f virushashes.txt && git diff-index --quiet HEAD || git commit -m "Update Virus Hashes [skip ci]"
+  - git add -f virushashes.txt && git diff-index --quiet HEAD || git commit -q -m "Update Virus Hashes [skip ci]"
 
 after_success:
   - git push origin HEAD:master
