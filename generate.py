@@ -26,11 +26,6 @@ else:
 # Create or clear the hash file
 open("virushashes.txt", "w").close()
 
-# Clear Temporary File
-if isfile("newhashes.txt"):
-    print("Removing temporary hashes file...")
-    open("newhashes.txt", "w").close()
-
 # While the virushashes file is open
 with open("virushashes.txt", "r+") as f:
     # For each possible file
