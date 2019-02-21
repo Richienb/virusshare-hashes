@@ -14,19 +14,19 @@ Every single [VirusShare](https://virusshare.com/hashes.4n6) MD5 hash in a singl
 
 Download from this URL:
 ```
-https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 #### Using CURL
 
 ```sh
-curl -L -o virushashes.txt https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+curl -L -o virushashes.txt https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 #### Using WGET
 
 ```sh
-wget https://raw.githubusercontent.com/Richienb/virusshare-hashes/master/virushashes.txt
+wget https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt
 ```
 
 Other methods of download **are** supported
@@ -94,12 +94,14 @@ before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/<REPO_OWNER_USERNAME>/<REPO_NAME>.git
   - git config --global user.name "<NAME OF COMMITER (SOMETHING LIKE: 'Commit Bot')>"
   - git config --global user.email "<COMMITTER EMAIL ADDRESS (THIS COULD BE YOURS)>"
+  - echo -e "machine github.com\n  login $github_token" > ~/.netrc
+  - git lfs pull
 
 before_script:
   - rm -f virushashes.txt
 
 script:
-  - curl -L -o virushashes.txt https://raw.githack.com/Richienb/virusshare-hashes/master/virushashes.txt
+  - curl -L -o virushashes.txt https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt
   
 after_script:
   - git add virushashes.txt
@@ -114,3 +116,5 @@ notifications: email: false
 3. Set the `github_token` environmental variable in Travis CI to that token.
 
 4. Schedule a cron job with a daily interval, with the option of only running it if one hasn't in the past 24 hours selected.
+
+5. Ensure Git LFS is working properly. If not, run the following command in the repository directory: `git lfs track "virushashes.txt"`
