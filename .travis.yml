@@ -2,12 +2,19 @@ language: python
 
 dist: xenial
 
+addons:
+  apt:
+    sources:
+      - github-git-lfs-xenial
+
 python: 3.7
 
 before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
   - git config --global user.email "richiebendall@gmail.com"
   - git config --global user.name "ROS Bot"
+  - echo -e "machine github.com\n  login $github_token" > ~/.netrc
+  - git lfs pull
 
 script:
   - python generate.py
