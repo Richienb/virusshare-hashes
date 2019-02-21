@@ -27,7 +27,7 @@ else:
 open("virushashes.txt", "w").close()
 
 # While the virushashes file is open
-with open("virushashes.txt", "r+") as f:
+with open("virushashes.txt", "a") as f:
     # For each possible file
     for i in range(0, 99999):
         # Set URL to a variable
