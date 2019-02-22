@@ -65,7 +65,7 @@ The hashes are updated weekly but you can manually build the hashes yourself as 
 
 - Python 2.x or newer.
 - An internet connection.
-- Available disk space. 5GB (not including Python) should be more than enough; at the time of writing the generated file is only 1.02GB big.
+- Available disk space. 5GB (not including Python) should be more than enough; the generated file is only ![File size of hashes file](https://img.shields.io/github/size/Richienb/virusshare-hashes/virushashes.txt.svg?label=&style=flat-square) big.
 
 #### How to do it
 
