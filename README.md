@@ -31,6 +31,13 @@ wget https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master
 
 Other methods of download **are** supported
 
+### Gzipped
+
+You can download the gzipped version of the hashlist to conserve internet usage from this URL:
+```
+https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt.gz
+```
+
 ### Use the online API
 
 You can use the ROS Quick Scan API to check if a MD5 hash matches one in the list
