@@ -40,7 +40,7 @@ with open("virushashes.txt", "a") as f:
             with urlopen(url) as resp:
 
                 # Write the response to the file
-                f.write("\n".join(str(resp.read()).strip("b'").split("\\n")))
+                f.write("\n".join([ x for x in str(resp.read()).strip("b'").split("\\n") if "#" not in x ]))
 
             print("Successfully saved " + url)
 
