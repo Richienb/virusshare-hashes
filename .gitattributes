@@ -66,3 +66,4 @@
 # (among others).
 
 virushashes.txt filter=lfs diff=lfs merge=lfs -text
+virushashes.txt.gz filter=lfs diff=lfs merge=lfs -text
