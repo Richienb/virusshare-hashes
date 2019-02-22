@@ -4,6 +4,8 @@ dist: xenial
 
 addons:
   apt:
+    packages:
+      - gzip
     sources:
       - github-git-lfs-xenial
 
@@ -18,7 +20,8 @@ before_install:
 
 script:
   - python generate.py
-  - git add -f virushashes.txt && git diff-index --quiet HEAD || git commit -q -m "Update Virus Hashes [skip ci]"
+  - gzip -f -k virushashes.txt
+  - git add -f virushashes.txt virushashes.txt.gz && git diff-index --quiet HEAD || git commit -q -m "Update Virus Hashes [skip ci]"
 
 after_success:
   - git push origin HEAD:master
