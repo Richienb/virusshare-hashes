@@ -38,6 +38,11 @@ You can download the gzipped version of the hashlist to conserve internet usage 
 https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt.gz
 ```
 
+#### Using CURL and GUNZIP
+```
+curl -L -o virushashes.txt.gz https://media.githubusercontent.com/media/Richienb/virusshare-hashes/master/virushashes.txt.gz && gunzip virushashes.txt.gz
+```
+
 ### Use the online API
 
 You can use the ROS Quick Scan API to check if a MD5 hash matches one in the list
@@ -72,7 +77,7 @@ The hashes are updated weekly but you can manually build the hashes yourself as 
 
 - Python 2.x or newer.
 - An internet connection.
-- Available disk space. 5GB (not including Python) should be more than enough; the generated file is only ![File size of hashes file](https://img.shields.io/github/size/Richienb/virusshare-hashes/virushashes.txt.svg?label=&style=flat-square) big.
+- Available disk space. At least ![File size of hashes file](https://img.shields.io/github/size/Richienb/virusshare-hashes/virushashes.txt.svg?label=&style=flat-square) should be enough.
 
 #### How to do it
 
