@@ -1,6 +1,6 @@
-language: python
+language:          python
 
-dist: xenial
+dist:              xenial
 
 addons:
   apt:
@@ -9,7 +9,7 @@ addons:
     sources:
       - github-git-lfs-xenial
 
-python: 3.7
+python:            3.7
 
 before_install:
   - git remote set-url origin https://Richienb:${github_token}@github.com/Richienb/virusshare-hashes.git
@@ -21,10 +21,10 @@ before_install:
 script:
   - python generate.py
   - gzip -f -k virushashes.txt
-  - git add -f virushashes.txt virushashes.txt.gz && git diff-index --quiet HEAD || git commit -q -m "Update Virus Hashes [skip ci]"
+  - git add -f virushashes.txt virushashes.txt.gz urls.json && git diff-index --quiet HEAD || git commit -q -m "Update Virus Hashes [skip ci]"
 
 after_success:
   - git push origin HEAD:master
 
 notifications:
-  email: false
+  email:           false
