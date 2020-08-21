@@ -35,7 +35,7 @@ with open("virushashes.txt", "a") as f:
     # For each possible file
     for i in range(0, 99999):
         # Set URL to a variable
-        url = "https://virusshare.com/hashes/VirusShare_{}.md5".format(
+        url = "https://virusshare.com/hashfiles/VirusShare_{}.md5".format(
             str(i).zfill(5))
         print("Attemping to download {}...".format(url))
 
