@@ -9,7 +9,7 @@ with open('virushashes.txt', 'w') as virushashes:
 		url = f'https://virusshare.com/hashfiles/VirusShare_{str(id).zfill(5)}.md5'
 
 		try:
-			response = requests.get('https://virusshare.com/hashfiles/VirusShare_00000.md5', stream=True)
+			response = requests.get(url, stream=True)
 			response.encoding = 'utf-8'
 
 			for line in response.iter_lines(decode_unicode=True):
