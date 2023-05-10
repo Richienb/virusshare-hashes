@@ -10,6 +10,7 @@ with open('virushashes.txt', 'w') as virushashes:
 
 		try:
 			response = requests.get(url, stream=True)
+			response.raise_for_status()
 			response.encoding = 'utf-8'
 
 			for line in response.iter_lines(decode_unicode=True):
